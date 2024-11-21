@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ page_title }}</h1>
+  <ul>
+    {% for post in posts %}
+      <li>{{ post.title }} ({{ post.created }})</li>
+    {% empty %}
+      <li>No posts...</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
